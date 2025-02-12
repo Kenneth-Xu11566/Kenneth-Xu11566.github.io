@@ -1,76 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kenneth Xu - Personal Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kenneth Xu – Personal Website</title>
+  <!-- Google Font (Montserrat) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Kenneth Xu</h1>
-        <nav>
-            <a href="#bio">Bio</a> | 
-            <a href="#research">Research Interests</a> | 
-            <a href="#publications">Publications</a> | 
-            <a href="#updates">Updates</a> | 
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <header>
+    <div class="header-container container">
+      <h1 class="name">Kenneth Xu</h1>
+      <nav>
+        <ul>
+          <li><a href="#bio">Bio</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#updates">Updates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <section id="bio" class="content-section">
-            <div class="container">
-                <div class="text">
-                    <h2>Bio</h2>
-                    <p>
-                        Hi, I'm Kenneth Xu, a passionate Computer Science and Cognitive Science student at the University of Michigan. 
-                        I specialize in AI, machine learning, and full-stack development, combining creativity and technology to solve 
-                        complex problems.
-                    </p>
-                </div>
-                <div class="image">
-                    <!-- Replace the src with your actual image path -->
-                    <img src="images/kenneth-profile.jpg" alt="Kenneth Xu">
-                </div>
-            </div>
-        </section>
+  <main>
+    <!-- Bio Section -->
+    <section id="bio" class="section bio">
+      <div class="container bio-container">
+        <div class="bio-text">
+          <h2>About Me</h2>
+          <p>
+            Hello! I'm Kenneth Xu, a junior pursuing a double major in Computer Science and Cognitive Science at the University of Michigan. I'm passionate in bridging technology and human perception—whether I’m building full-stack web apps or exploring AI’s creative side.
+          </p>
+          <br>
+          <p>
+            I am currently a member of Professor Xu Wang's Lifelong Learning Lab where I'm enhancing collaborative writing with LLMs. I am also conducting research on 3D Segmentation using 3D Gaussian Splats, mentored by Professor Chen Jiasi.
+          </p>
+          <br>
+          <p>
+            When I'm not in the lab or coding, you can find me playing competitive table tennis, cooking up favorites like omurice and steak, lifting, or playing basketball.
+          </p>
+        </div>
+        <div class="bio-image">
+          <!-- Replace the src below with your actual image path -->
+          <img src="images/kenneth-profile.jpg" alt="Kenneth Xu">
+        </div>
+      </div>
+    </section>
 
-        <section id="research" class="content-section">
-            <h2>Research Interests</h2>
-            <ul>
-                <li>Deep learning for computer vision and natural language processing.</li>
-                <li>Generative AI's impact on creativity and innovation.</li>
-                <li>Human-AI interaction and improving interpretability of machine learning systems.</li>
-                <li>Applications of AI in cognitive science and human perception.</li>
-            </ul>
-        </section>
+    <!-- Research Interests Section -->
+    <section id="research" class="section research">
+        <div class="container">
+          <h2>Research Interests</h2>
+          <p>
+            I am deeply fascinated by the interplay between humans and technology, which drives my research in Human Computer Interaction (HCI). My work focuses on designing intuitive, user-centric interfaces and systems that not only enhance the overall user experience but also empower individuals to interact with technology in more natural, seamless ways. 
+          </p>
+          <br>
+          <p>
+            I'm also passionate about the applications of AI x Computer Vision. I investigate how computer vision technologies, when combined with AI, can create dynamic and innovative applications—from augmented reality experiences to assistive technologies. Alongside this technical pursuit, I'm also interested in examining the transparency and ethical dimensions of AI. 
+          </p>
+          <br>
+          <p>
+            I am always eager to connect with fellow researchers, industry professionals, or anyone interested in these topics. Whether you're looking to collaborate on a project, share insights, or simply have a chat about the future of AI and HCI, feel free to reach out!
+          </p>
+        </div>
+    </section>
+      
+      
 
-        <section id="publications" class="content-section">
-            <h2>Publications</h2>
-            <ul>
-                <li><a href="https://arxiv.org/abs/your-clock-paper-link">Clock Paper</a> - Research on analog vs. digital clock perceptual efficiency.</li>
-            </ul>
-        </section>
+    <!-- Publications Section -->
+    <section id="publications" class="section publications">
+      <div class="container">
+        <h2>Publications</h2>
+        <div class="pub-list">
+          <article class="pub-item">
+            <h3><a href="https://arxiv.org/abs/placeholder1" target="_blank">Time &amp; Motion: Analog vs. Digital Perception</a></h3>
+            <p><em>Journal of Temporal Studies, 2025</em></p>
+            <p>A study exploring how people process analog and digital time displays. <a href="#">[PDF]</a></p>
+          </article>
+          <article class="pub-item">
+            <h3><a href="https://arxiv.org/abs/placeholder2" target="_blank">Neural Networks in Everyday Life</a></h3>
+            <p><em>Youth Tech Conference Proceedings, 2024</em></p>
+            <p>Filler text on applying neural networks to solve day-to-day challenges. <a href="#">[PDF]</a></p>
+          </article>
+          <article class="pub-item">
+            <h3><a href="https://arxiv.org/abs/placeholder3" target="_blank">Exploring AI: From Theory to Practice</a></h3>
+            <p><em>Undergraduate Research Symposium, 2023</em></p>
+            <p>An introductory look at AI techniques and how they are transforming technology. <a href="#">[PDF]</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <section id="updates" class="content-section">
-            <h2>Updates</h2>
-            <ul>
-                <li>January 2025: Submitted research on human perception of time in cognitive systems.</li>
-                <li>August 2024: Interned at Hemingway, working on AI-driven tools for healthcare.</li>
-            </ul>
-        </section>
+    <!-- Updates Section -->
+    <section id="updates" class="section updates">
+      <div class="container">
+        <h2>Updates</h2>
+        <ul>
+          <li><strong>February 2025:</strong> Presented at the Youth Tech Summit on emerging AI innovations.</li>
+          <li><strong>December 2024:</strong> Launched a personal project focused on interactive web experiences.</li>
+          <li><strong>August 2024:</strong> Completed an internship at Hemingway, developing AI-driven healthcare tools.</li>
+        </ul>
+      </div>
+    </section>
 
-        <section id="contact" class="content-section">
-            <h2>Contact</h2>
-            <p>Email: kennethx@umich.edu</p>
-            <p>GitHub: <a href="https://github.com/Kenneth-Xu11566" target="_blank">github.com/Kenneth-Xu11566</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/kenneth-x" target="_blank">linkedin.com/in/kenneth-x</a></p>
-        </section>
-    </main>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:kennethx@umich.edu">kennethx@umich.edu</a></p>
+        <p>GitHub: <a href="https://github.com/Kenneth-Xu11566" target="_blank">github.com/Kenneth-Xu11566</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/kenneth-x" target="_blank">linkedin.com/in/kenneth-x</a></p>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2025 Kenneth Xu. All rights reserved.</p>
-    </footer>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Kenneth Xu. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- (Optional) Feather icons script if you decide to use icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    feather.replace();
+  </script>
 </body>
 </html>

@@ -1,88 +1,234 @@
-/* General Styling */
-body {
-    font-family: Arial, sans-serif;
+/* Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables for easy theme management */
+:root {
+    --primary-color: #3498db;      /* Accent blue */
+    --secondary-color: #2c3e50;    /* Dark blue/grey */
+    --accent-color: #ecf0f1;       /* Light text */
+    --body-bg: #f0f2f5;           /* Off-white background */
+    --text-color: #333;
+    --font-family: 'Montserrat', sans-serif;
+    --transition-speed: 0.3s;
+}
+
+/* Base Styles */
+body {
+    font-family: var(--font-family);
+    background-color: var(--body-bg);
+    color: var(--text-color);
     line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
+    padding: 20px 0;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 /* Header */
 header {
-    background: #4c4c4c;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    background: linear-gradient(135deg, var(--secondary-color), #34495e);
+    color: var(--accent-color);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-
-header nav a {
-    color: #ddd;
-    margin: 0 10px;
+header .name {
+    font-size: 3rem;  /* Increased from 2rem */
+    text-transform: uppercase;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav ul li a {
+    color: var(--accent-color);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    position: relative;
+    padding: 5px 0;
+    transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
 }
 
-header nav a:hover {
-    color: white;
-    text-decoration: underline;
+/* Underline effect on hover */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    left: 0;
+    bottom: 0;
+    transition: width var(--transition-speed) ease;
+}
+nav ul li a:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+nav ul li a:hover::after {
+    width: 100%;
 }
 
 /* Main Content */
 main {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px 0;
+    animation: fadeIn 0.8s ease-out;
 }
 
-.content-section {
-    margin-bottom: 40px;
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.content-section h2 {
-    font-size: 1.8em;
-    color: #4c4c4c;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
+/* Section Styles */
+.section {
+    padding: 40px 0;
+    border-bottom: 1px solid #ddd;
+    scroll-margin-top: 120px;  /* Added offset so headings aren’t hidden by the sticky header */
+}
+.section:last-of-type {
+    border-bottom: none;
+}
+.section h2 {
+    font-size: 2rem;  /* Increased from 1.8rem */
+    color: var(--secondary-color);
     margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.section h2::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 3px;
 }
 
-.content-section ul {
-    list-style: disc;
-    margin-left: 20px;
-}
-
-.container {
+/* Bio Section */
+.bio-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    gap: 20px;
+    animation: fadeIn 1s ease-out;
+}
+.bio-text {
+    flex: 1 1 300px;
+}
+.bio-image {
+    flex: 0 1 200px;  /* Increased container size for the image */
+}
+.bio-image img {
+    max-width: 200px; /* Shows the image in its entirety */
+    width: 100%;
+    height: auto;     /* Maintains the original aspect ratio */
+    border: 2px solid var(--primary-color); /* Subtle border */
+    transition: transform var(--transition-speed) ease;
+    /* Removed border-radius to avoid cropping into a circle */
+}
+.bio-image img:hover {
+    transform: scale(1.05);
 }
 
-.container .text {
-    flex: 1;
-    margin-right: 20px;
+/* Research Section */
+.research ul {
+    list-style: disc;
+    padding-left: 20px;
 }
 
-.container .image img {
-    max-width: 150px;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Publications Section */
+.pub-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.pub-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+.pub-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.pub-item h3 {
+    font-size: 1.4rem;  /* Slightly larger for prominence */
+    margin-bottom: 5px;
+}
+.pub-item p {
+    font-size: 0.95rem;
+}
+
+/* Updates Section */
+.updates ul {
+    list-style: none;
+}
+.updates ul li {
+    margin-bottom: 15px;
+    padding-left: 15px;
+    border-left: 3px solid var(--primary-color);
+}
+
+/* Contact Section */
+.contact a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+.contact a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
 }
 
 /* Footer */
 footer {
+    background: linear-gradient(135deg, var(--secondary-color), #34495e);
+    color: var(--accent-color);
+    padding: 15px 0;
     text-align: center;
-    padding: 10px;
-    background: #4c4c4c;
-    color: white;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .bio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bio-image {
+        order: -1;
+    }
 }
