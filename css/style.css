@@ -145,7 +145,7 @@ main {
     flex: 0 1 200px;  /* Increased container size for the image */
 }
 .bio-image img {
-    max-width: 200px; /* Shows the image in its entirety */
+    max-width: 300px; /* Shows the image in its entirety */
     width: 100%;
     height: auto;     /* Maintains the original aspect ratio */
     border: 2px solid var(--primary-color); /* Subtle border */
