@@ -15,10 +15,10 @@
       <nav>
         <ul>
           <li><a href="#bio">Bio</a></li>
+          <li><a href="#publications">Research</a></li>
           <li><a href="#research">Interests</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#publications">Research</a></li>
           <li><a href="#updates">Updates</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -51,6 +51,73 @@
       </div>
     </section>
 
+    <!-- Research and Projects Section -->
+    <section id="publications" class="section publications">
+      <div class="container">
+        <h2>Research Projects</h2>
+        <div class="pub-list">
+          <!-- Research Papers -->
+          <article class="pub-item">
+            <div class="pub-content">
+              <div class="pub-image">
+                <img src="images/ramenlift.png" alt="Splat Feature Solver Preview">
+              </div>
+              <div class="pub-text">
+                <h3>
+                  <a href="https://splat-distiller.pages.dev/" target="_blank">
+                    Splat Feature Solver: Fast and Provable Feature Lifting for 3D Scene Understanding
+                  </a>
+                </h3>
+                <p><em>ICLR 2026 Submission</em></p>
+                <p>
+                  We introduce a unified and efficient approach to feature lifting, enabling rich image descriptors like CLIP to be attached to splat-based 3D representations in mere minutes. Our method formulates the lifting task as a sparse linear inverse problem with provable error bounds.
+                  <a href="Splat_Feature_Solver.pdf" target="_blank">[PDF]</a>
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="pub-item">
+            <div class="pub-content">
+              <div class="pub-image">
+                <img src="images/mastsambear.png" alt="MastSAM Preview">
+              </div>
+              <div class="pub-text">
+                <h3>
+                  <a href="MAST-SAM.pdf" target="_blank">
+                    MastSAM: Solving Multi-view Inconsistency in 3D Segmentation
+                  </a>
+                </h3>
+                <p><em>IJCNN Publication, 2025</em></p>
+                <p>
+                  We tackle the challenge of inconsistent segmentation outputs from 2D models by leveraging a 3D coordinate mapping technique. MastSAM effectively aligns segmentation masks across multiple views, ensuring coherent and consistent 3D segmentation results across subsequent image frames.
+                  <a href="MAST-SAM.pdf" target="_blank">[PDF]</a>
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="pub-item">
+            <div class="pub-content">
+              <div class="pub-image">
+                <img src="images/Clock_CNN.png" alt="CNN Clock Types Preview">
+              </div>
+              <div class="pub-text">
+                <h3>
+                  <a href="CNN_Clock_Types.pdf" target="_blank">
+                    Perception of Digital vs. Analog Clocks by Deep Learning Networks
+                  </a>
+                </h3>
+                <p><em>Journal of Quantitative and Qualitative Research, 2022</em></p>
+                <p>
+                  This study uses convolutional neural networks to mimic human clock-reading behavior. The results indicate that while digital clocks yield more accurate time readings, analog clocks demand less "mental energy," aligning with observed human perceptual tendencies. This paper also proves the efficacy of Dr. Massaro's Kid Klok.
+                  <a href="CNN_Clock_Types.pdf" target="_blank">[PDF]</a>
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- Research Interests Section -->
     <section id="research" class="section research">
         <div class="container">
@@ -71,6 +138,40 @@
             I'm always eager to connect with fellow researchers, industry professionals, or anyone passionate about making virtual reality indistinguishable from physical reality. Whether you're interested in collaborating on 3D scene understanding, semantic representation, or building the interfaces that will define our virtual future, I'd love to hear from you!
           </p>
         </div>
+    </section>
+
+    <!-- Personal Projects Section -->
+    <section id="personal-projects" class="section personal-projects">
+      <div class="container">
+        <h2>Personal Projects</h2>
+        <div class="pub-list">
+          <article class="pub-item">
+            <h3>
+              <a href="https://github.com/Kenneth-Xu11566/Restaurant-recommender" target="_blank">
+                Restaurant-Recommender: All in one recommender for tourists, from restaurants to bakeries.
+              </a>
+            </h3>
+            <p><em>Personal Project, 2025</em></p>
+            <p>
+              A Python-based restaurant recommendation system that fetches and ranks the top Google-rated restaurants (works for shops and bakeries) across different neighborhoods in a given city. The application utilizes web scraping and API calls to provide real-time, location-specific suggestions for excited tourists.
+              <a href="https://github.com/Kenneth-Xu11566/Restaurant-recommender" target="_blank">[GitHub Repository]</a>
+            </p>
+          </article>
+
+          <article class="pub-item">
+            <h3>
+              <a href="https://github.com/Kenneth-Xu11566/LocationAlert" target="_blank">
+                LocationAlert: Geofence-Based Location Monitoring
+              </a>
+            </h3>
+            <p><em>Personal Project, 2024</em></p>
+            <p>
+              A mobile application that alerts users when they leave a predefined geofenced location. Designed for ensuring location-based safety and reminders, this project integrates GPS tracking and push notifications to keep users informed about their location status in real time.
+              <a href="https://github.com/Kenneth-Xu11566/LocationAlert" target="_blank">[GitHub Repository]</a>
+            </p>
+          </article>
+        </div>
+      </div>
     </section>
 
     <!-- Education Section -->
@@ -113,81 +214,6 @@
     </section>
       
       
-
-  <!-- Research and Projects Section -->
-  <section id="publications" class="section publications">
-    <div class="container">
-      <h2>Research and Projects</h2>
-      <div class="pub-list">
-        <!-- Research Papers -->
-        <article class="pub-item">
-          <h3>
-            <a href="https://splat-distiller.pages.dev/" target="_blank">
-              Splat Feature Solver: Fast and Provable Feature Lifting for 3D Scene Understanding
-            </a>
-          </h3>
-          <p><em>ICLR 2026 Submission</em></p>
-          <p>
-            We introduce a unified and efficient approach to feature lifting, enabling rich image descriptors like CLIP to be attached to splat-based 3D representations in mere minutes. Our method formulates the lifting task as a sparse linear inverse problem with provable error bounds.
-            <a href="Splat_Feature_Solver.pdf" target="_blank">[PDF]</a>
-          </p>
-        </article>
-        <article class="pub-item">
-          <h3>
-            <a href="MAST-SAM.pdf" target="_blank">
-              MastSAM: Solving Multi-view Inconsistency in 3D Segmentation
-            </a>
-          </h3>
-          <p><em>IJCNN Publication, 2025</em></p>
-          <p>
-            We tackle the challenge of inconsistent segmentation outputs from 2D models by leveraging a 3D coordinate mapping technique. MastSAM effectively aligns segmentation masks across multiple views, ensuring coherent and consistent 3D segmentation results across subsequent image frames.
-            <a href="MAST-SAM.pdf" target="_blank">[PDF]</a>
-          </p>
-        </article>
-        <article class="pub-item">
-          <h3>
-            <a href="CNN_Clock_Types.pdf" target="_blank">
-              Perception of Digital vs. Analog Clocks by Deep Learning Networks
-            </a>
-          </h3>
-          <p><em>Journal of Quantitative and Qualitative Research, 2022</em></p>
-          <p>
-            This study uses convolutional neural networks to mimic human clock-reading behavior. The results indicate that while digital clocks yield more accurate time readings, analog clocks demand less “mental energy,” aligning with observed human perceptual tendencies. This paper also proves the efficacy of Dr. Massaro's Kid Klok.
-            <a href="CNN_Clock_Types.pdf" target="_blank">[PDF]</a>
-          </p>
-        </article>
-
-        <!-- Personal Projects -->
-        <article class="pub-item">
-          <h3>
-            <a href="https://github.com/Kenneth-Xu11566/Restaurant-recommender" target="_blank">
-              Restaurant-Recommender: All in one recommender for tourists, from restaurants to bakeries.
-            </a>
-          </h3>
-          <p><em>Personal Project, 2025</em></p>
-          <p>
-            A Python-based restaurant recommendation system that fetches and ranks the top Google-rated restaurants (works for shops and bakeries) across different neighborhoods in a given city. The application utilizes web scraping and API calls to provide real-time, location-specific suggestions for excited tourists.
-            <a href="https://github.com/Kenneth-Xu11566/Restaurant-recommender" target="_blank">[GitHub Repository]</a>
-          </p>
-        </article>
-
-        <article class="pub-item">
-          <h3>
-            <a href="https://github.com/Kenneth-Xu11566/LocationAlert" target="_blank">
-              LocationAlert: Geofence-Based Location Monitoring
-            </a>
-          </h3>
-          <p><em>Personal Project, 2024</em></p>
-          <p>
-            A mobile application that alerts users when they leave a predefined geofenced location. Designed for ensuring location-based safety and reminders, this project integrates GPS tracking and push notifications to keep users informed about their location status in real time.
-            <a href="https://github.com/Kenneth-Xu11566/LocationAlert" target="_blank">[GitHub Repository]</a>
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-
 
     <!-- Updates Section -->
     <section id="updates" class="section updates">
