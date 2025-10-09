@@ -170,16 +170,30 @@ main {
 }
 
 .pub-item {
-    background: #f8f9fa;
+    background: white;
     padding: 25px;
-    border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all var(--transition-speed) ease;
+    position: relative;
+}
+
+.pub-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    border-radius: 12px 0 0 12px;
 }
 
 .pub-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    border-color: var(--primary-color);
 }
 
 .pub-content {
@@ -194,18 +208,50 @@ main {
     height: 150px;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+    background: white;
+    padding: 4px;
+    transition: all var(--transition-speed) ease;
+    position: relative;
 }
 
 .pub-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 4px;
     transition: transform var(--transition-speed) ease;
 }
 
+.pub-image:hover {
+    border-color: var(--secondary-color);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+    transform: translateY(-2px);
+}
+
 .pub-image:hover img {
-    transform: scale(1.05);
+    transform: scale(1.02);
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 8px 12px 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 0 0 4px 4px;
+    opacity: 0;
+    transition: opacity var(--transition-speed) ease;
+}
+
+.pub-image:hover .image-caption {
+    opacity: 1;
 }
 
 .pub-text {
