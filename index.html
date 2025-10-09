@@ -16,6 +16,8 @@
         <ul>
           <li><a href="#bio">Bio</a></li>
           <li><a href="#research">Interests</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#publications">Research</a></li>
           <li><a href="#updates">Updates</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -31,15 +33,15 @@
         <div class="bio-text">
           <h2>About Me</h2>
           <p>
-            Hello! I'm Kenneth Xu, a junior pursuing a double major in Computer Science and Cognitive Science at the University of Michigan. I'm passionate in bridging technology and human perception—whether I’m building full-stack web apps or exploring AI’s creative side.
+            Hello! I'm Kenneth Xu, a senior graduating in December 2025 with a double major in Computer Science and Cognitive Science at the University of Michigan. I'm passionate in bridging technology and human perception—whether I’m building full-stack web apps or exploring AI’s creative side.
           </p>
           <br>
           <p>
-            I am currently a member of Professor Xu Wang's Lifelong Learning Lab where I'm enhancing collaborative writing with LLMs. I am also conducting research on 3D Segmentation using 3D Gaussian Splats, mentored by Professor Chen Jiasi.
+            I'm focused on conducting research on 3D Segmentation and semantic representations of 3D Gaussian Splats, working with peers at USC and mentored by Professor Chen Jiasi. I'm also currently a member of Professor Xu Wang's Lifelong Learning Lab where I'm working on enhancing Human Computer Interaction. 
           </p>
           <br>
           <p>
-            When I'm not in the lab or coding, you can find me playing competitive table tennis, cooking up favorites like omurice and steak, lifting, or playing basketball.
+            When I'm not in class or coding, you can find me playing competitive table tennis, cooking up favorites like omurice and steak, lifting, or playing basketball.
           </p>
         </div>
         <div class="bio-image">
@@ -54,17 +56,60 @@
         <div class="container">
           <h2>Research Interests</h2>
           <p>
-            I am deeply fascinated by the interplay between humans and technology, which drives my research in Human Computer Interaction (HCI). My work focuses on designing intuitive, user-centric interfaces and systems that not only enhance the overall user experience but also empower individuals to interact with technology in more natural, seamless ways. 
+            My ultimate vision is a world enabled by AI where anyone can travel and perceive anywhere in the world without being physically present—imagine visiting the Roman Colosseum and witnessing gladiatorial combat unfold before your eyes, or exploring the depths of the Amazon rainforest with perfect fidelity. This dream drives my research in 3D scene understanding and semantic representation, where I develop foundational technologies that make such immersive experiences possible.
           </p>
           <br>
           <p>
-            I'm also passionate about the applications of AI x Computer Vision. I investigate how computer vision technologies, when combined with AI, can create dynamic and innovative applications—from augmented reality experiences to assistive technologies. Alongside this technical pursuit, I'm also interested in examining the transparency and ethical dimensions of AI. 
+            Through my work on <strong>MastSAM</strong> and <strong>Splat Feature Solver</strong>, I'm building the technical foundations for this vision. MastSAM solves the critical challenge of multi-view inconsistency in 3D segmentation by leveraging 3D coordinate mapping techniques, ensuring coherent spatial understanding across different perspectives—essential for creating seamless virtual environments. Meanwhile, Splat Feature Solver enables rich semantic understanding of 3D scenes by efficiently lifting powerful image descriptors like CLIP into 3D Gaussian Splat representations, allowing AI systems to understand and interact with virtual worlds at a semantic level.
           </p>
           <br>
           <p>
-            I am always eager to connect with fellow researchers, industry professionals, or anyone interested in these topics. Whether you're looking to collaborate on a project, share insights, or simply have a chat about the future of AI and HCI, feel free to reach out!
+            These technologies converge toward creating photorealistic, semantically-aware virtual worlds where users can not only see but truly understand and interact with their surroundings. My research in Human-Computer Interaction complements this vision by designing intuitive interfaces that make these complex 3D environments accessible to everyone, bridging the gap between cutting-edge AI capabilities and natural human interaction.
+          </p>
+          <br>
+          <p>
+            I'm always eager to connect with fellow researchers, industry professionals, or anyone passionate about making virtual reality indistinguishable from physical reality. Whether you're interested in collaborating on 3D scene understanding, semantic representation, or building the interfaces that will define our virtual future, I'd love to hear from you!
           </p>
         </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education">
+      <div class="container">
+        <h2>Education</h2>
+        <div class="education-item">
+          <h3>University of Michigan, Ann Arbor</h3>
+          <p><strong>Bachelor of Science in Computer Science & Cognitive Science</strong></p>
+          <p><em>Expected Graduation: December 2025</em></p>
+          <p><strong>Relevant Coursework:</strong> Machine Learning, Computer Vision, Foundations of Computer Science,Programming & Data Structures, Computer Organization, AI-Enabled XR, Autonomous Robotics, Practical Data Science, Discrete Mathematics, Statistics</p>
+          <p><strong>Research Focus:</strong> 3D Scene Understanding, Semantic Representation, Gaussian Splatting, Human-Computer Interaction in Education</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Programming Languages</h3>
+            <p>Python, C++, JavaScript, TypeScript, Java, MATLAB, R</p>
+          </div>
+          <div class="skill-category">
+            <h3>ML/AI Frameworks</h3>
+            <p>PyTorch, TensorFlow, OpenCV, CLIP, SAM, Gaussian Splatting, 3DGS</p>
+          </div>
+          <div class="skill-category">
+            <h3>Research Tools</h3>
+            <p>Git, Conda, Docker, Viser, Blender, Unity, Jupyter Notebooks</p>
+          </div>
+          <div class="skill-category">
+            <h3>Web Development</h3>
+            <p>React, Node.js, HTML/CSS, REST APIs, Database Design</p>
+          </div>
+        </div>
+      </div>
     </section>
       
       
@@ -77,11 +122,23 @@
         <!-- Research Papers -->
         <article class="pub-item">
           <h3>
+            <a href="https://splat-distiller.pages.dev/" target="_blank">
+              Splat Feature Solver: Fast and Provable Feature Lifting for 3D Scene Understanding
+            </a>
+          </h3>
+          <p><em>ICLR 2026 Submission</em></p>
+          <p>
+            We introduce a unified and efficient approach to feature lifting, enabling rich image descriptors like CLIP to be attached to splat-based 3D representations in mere minutes. Our method formulates the lifting task as a sparse linear inverse problem with provable error bounds.
+            <a href="Splat_Feature_Solver.pdf" target="_blank">[PDF]</a>
+          </p>
+        </article>
+        <article class="pub-item">
+          <h3>
             <a href="MAST-SAM.pdf" target="_blank">
               MastSAM: Solving Multi-view Inconsistency in 3D Segmentation
             </a>
           </h3>
-          <p><em>IJCNN Submission, 2025</em></p>
+          <p><em>IJCNN Publication, 2025</em></p>
           <p>
             We tackle the challenge of inconsistent segmentation outputs from 2D models by leveraging a 3D coordinate mapping technique. MastSAM effectively aligns segmentation masks across multiple views, ensuring coherent and consistent 3D segmentation results across subsequent image frames.
             <a href="MAST-SAM.pdf" target="_blank">[PDF]</a>
@@ -137,6 +194,8 @@
       <div class="container">
         <h2>Updates</h2>
         <ul>
+          <li><strong>September 2025:</strong> Submitted Splat Feature Solver to ICLR 2026</li>
+          <li><strong>July 2025:</strong> Presented MastSAM at IJCNN 2025</li>
           <li><strong>January 2025:</strong> Joined Professor Xu's Life-long Learning Lab as a Research Assistant</li>
           <li><strong>August 2024:</strong> Wrapped up an internship at Nowadays (YC S23), contributing to frontend development and database automation.</li>
           <li><strong>March 2024:</strong> Completed an internship at Hemingway, developing AI-driven healthcare tools, getting experience in NLP and HCI.</li>
@@ -151,7 +210,7 @@
         <p>Email: <a href="mailto:kennethx@umich.edu">kennethx@umich.edu</a></p>
         <p>GitHub: <a href="https://github.com/Kenneth-Xu11566" target="_blank">github.com/Kenneth-Xu11566</a></p>
         <p>LinkedIn: <a href="https://linkedin.com/in/kenneth-x" target="_blank">linkedin.com/in/kenneth-x</a></p>
-        <p>Resume: <a href="kenneth_xu_r.pdf" target="_blank">View my resume</a></p>
+        <p>Resume: <a href="kenneth_xu_2025.pdf" target="_blank">View my resume</a></p>
       </div>
     </section>
   </main>
