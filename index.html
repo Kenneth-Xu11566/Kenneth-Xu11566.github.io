@@ -100,19 +100,19 @@
           <article class="pub-item">
             <div class="pub-content">
               <div class="pub-image">
-                <img src="images/Clock_CNN.png" alt="CNN Clock Types Preview">
-                <div class="image-caption">Neural Network Architecture</div>
+                <img src="images/Tiny-YOLOSAM.png" alt="Tiny-YOLOSAM Preview">
+                <div class="image-caption">Hybrid Instance Segmentation</div>
               </div>
               <div class="pub-text">
                 <h3>
-                  <a href="CNN_Clock_Types.pdf" target="_blank">
-                    Perception of Digital vs. Analog Clocks by Deep Learning Networks
+                  <a href="https://github.com/Kenneth-Xu11566/tiny-yolosam" target="_blank">
+                    Tiny-YOLOSAM: YOLO + TinySAM Hybrid Instance Segmentation
                   </a>
                 </h3>
-                <p><em>Journal of Quantitative and Qualitative Research, 2022</em></p>
+                <p><em>Research Project, 2025</em></p>
                 <p>
-                  This study uses convolutional neural networks to mimic human clock-reading behavior. The results indicate that while digital clocks yield more accurate time readings, analog clocks demand less "mental energy," aligning with observed human perceptual tendencies. This paper also proves the efficacy of Dr. Massaro's Kid Klok.
-                  <a href="CNN_Clock_Types.pdf" target="_blank">[PDF]</a>
+                  Research implementation combining YOLOv12 object detection with TinySAM (efficient Segment Anything Model) for fast instance segmentation. We implement and evaluate three segmentation approaches: Hierarchical Baseline (TinySAM's adaptive two-stage point sampling), YOLO-only (YOLOv12 boxes → TinySAM segmentation), and Hybrid (YOLO for foreground + sparse points for background). The Hybrid approach achieves 3-8× faster inference than hierarchical methods while maintaining competitive AR/mIoU metrics, balancing speed and coverage.
+                  <a href="https://github.com/Kenneth-Xu11566/tiny-yolosam" target="_blank">[GitHub Repository]</a>
                 </p>
               </div>
             </div>
